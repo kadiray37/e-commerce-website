@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tüm öğrendiklerim</title>
+    <!--css link-->
+    <link rel="stylesheet" href="style.css">
+    <!---box icons link --->
+    <link rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+</head>
+<body>
+    <!--Navbar-->
+<header>
+    <a href="#" class="logo"><i class='bx bxs-basket' ></i></box-icon>AYEMEK</a>
+    <!--menu iconu css ile yok edilecek sayfa kücüldüğünde gelecek-->
+    <div class="bx bx-menu" id="menu-icon">
+    </div>
+    <!--nav listesi-->
+    <ul class="navbar">
+        <li><a href="#home" class="home active">Anasayfa</a></li>
+        <li><a href="#categories" class="home">Kategoriler</a></li>
+        <li><a href="#products" class="home">Ürünler</a></li>
+        <li><a href="#about" class="home">Hakkımızda</a></li>
+        <li><a href="#customers"class="home">Müşteriler</a></li>
+    </ul>
+    
+
+    <!--profil kısmı resim ekleme ve js cubuğu için icon-->
+    <div class="profile">
+        <img src="img/profile.jpg" alt="profilfoto">
+        <span>Kadir AY</span>
+        <i class='bx bx-caret-down' ></i>
+    </div>
+     <!--basket iconu javascript ile açılır basket-->
+    <div class="bx bx-basket" id="basket-icon">
+    </div>
+</header>
+
+<!--basket Bölümü-->
+ <div class="basket-area">
+        <div class="basket-area-content">
+            <h2>SEPETİNİZ</h2>
+            <div class="basket-item-wrapper">
+                <!-- product 1 başlangıç-->
+                <!-- <div class="basket-item">
+                    <div class="basket-item-img">
+                        <img src="img/p1.png" alt="product1">
+                    </div>
+                    <div class="basket-item-info">
+                        <h3>Tavuk Salata</h3>
+                        <p>1 adet</p>
+                        <span>$25</span>
+                    </div>
+                    <div class="basket-item-remove">
+                        <i class='bx bx-trash'></i>
+                    </div>
+                </div> -->
+                <!-- product 1 bitiş-->  
+            </div>
+            <div class="basket-item-total">
+                <div class="basket-item-total-content">
+                    <h3>Toplam Tutar:</h3>
+                    <span>$100</span>
+                </div> 
+            </div>
+        </div>
+    </div>
+  
+
+<!--Home Bölümü-->
+<div class="home swiper" id="home">
+ 
+    <div class="swiper-wrapper">
+        <!--slider 1-->
+      <div class="swiper-slide container">
+        <div class="home-text">
+            <span>lezzetliyiz</span>
+            <h1>Lezzeti Secin<br>en sağlıklı<br>tavuk salata</h1>
+            <a href="#" class="btn">Sipariş ver<i class='bx bx-right-arrow-alt'></i></a>
+        </div>
+        <img class="swiper-img" src="img/home1.png" alt="home1">
+        
+      </div>
+        
+       <!--slider 2 -->
+       <div class="swiper-slide container ">
+        <div class="home-text">
+            <span>Lezzetliyiz</span>
+            <h1>Lezzeti Secin<br>en iyi etten<br>kebap dürüm</h1>
+            <a href="#" class="btn">Sipariş ver<i class='bx bx-right-arrow-alt'></i></a>
+        </div>
+        <img class="swiper-img" src="img/home2.png" alt="home2">
+      </div>
+      <!--slider 2 -->
+          <!--slider 3-->  
+       <div class="swiper-slide container ">
+        <div class="home-text">
+            <span>Lezzetliyiz</span>
+            <h1>Lezzeti Secin<br>en iyi etten<br>Lahmacun</h1>
+            <a href="#" class="btn">Sipariş ver<i class='bx bx-right-arrow-alt'></i></a>
+        </div>
+        <img class="swiper-img" src="img/home3.png" alt="home3">
+        
+    </div>
+
+</div>
+<div id="sliderbtn">
+        <i  class='bx bx-chevron-left'></i>
+        <i  class='bx bx-chevron-right'></i>
+        </div>
+</div>
+<!--Categories Bölümü-->
+<section class="categories" id="categories">
+    <div class="heading">
+        <h1>Ürünlerimize göz atın <br><span>Kategoriler</span></h1>
+        <a href="#" class="btn">Şimdi Al<i class='bx bx-right-arrow-alt'></i></a>    
+    </div>
+<!--Categories container bölümü-->
+    <div class="categories-container">
+        <!--Box 1-->
+        <div class="box box1">
+            <img src="img/cate1.png" alt="">
+            <h2>Meyveler</h2>
+            <span>22 ürün</span>
+            <i class='bx bx-right-arrow-alt'></i>
+        </div>
+          <!--Box 2-->
+        <div class="box box2">
+            <img src="img/cate2.png" alt="">
+            <h2>Sebzeler</h2>
+            <span>18 Ürün</span>
+            <i class='bx bx-right-arrow-alt'></i>
+        </div>
+          <!--Box 3-->
+        <div class="box box3">
+            <img src="img/cate3.png" alt="">
+            <h2>İçecekler</h2>
+            <span>20 Ürün</span>
+            <i class='bx bx-right-arrow-alt'></i>
+        </div>
+          <!--Box 4-->
+        <div class="box box4">
+            <img src="img/cate4.png" alt="">
+            <h2>Kuruyemişler</h2>
+            <span>30 Ürün</span>
+            <i class='bx bx-right-arrow-alt'></i>
+        </div>
+          <!--Box 5-->
+        <div class="box box5">
+            <img src="img/cate5.png" alt="">
+            <h2>Baharat</h2>
+            <span>37 Ürün</span>
+            <i class='bx bx-right-arrow-alt'></i>
+        </div>
+        
+    </div>
+        
+</section>
+<!--products bölümü -->
+<section class="products" id="products">
+    <div class="heading">
+        <h1>Popüler Ürünlerimiz <br><span>Ürünler</span></h1>
+        <a href="#" class="btn">Şimdi Al<i class='bx bx-right-arrow-alt'></i></a>    
+    </div>
+    <!-- products container bölümü-->
+    <div class="production-wrapper">
+<div class="products-container">
+        <!--Box 1-->
+        <!-- <div id="production-box" class="box">
+            <img src="img/p1.png" alt="">
+            <span>Meyve Ürünü</span>
+            <h2>Organik Şeftali <br>250g</h2>
+            <h3 class="price">25TL <span>/kg</span></h3>
+            <i class='bx bx-cart-alt'></i>
+            <i class='bx bx-heart' ></i>
+            <span class="discount">-25%</span>
+        </div> -->
+
+        
+
+
+</div>
+        <div id="productbtn">
+            <i id="product-left" class='bx bx-chevron-left'></i>
+            <i id="product-right" class='bx bx-chevron-right'></i>
+        </div>
+        <div class="dats">
+            
+        </div>
+</div>       
+
+        
+    
+</section>
+
+<!-- About Bölümü -->
+ <section class="about" id="about">
+    <img src="img/about.png" alt="">
+    <div class="about-text">
+        <span>HAKKIMIZDA</span>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tenetur placeat eveniet molestias atque ipsam ea, dolorum facilis vero quibusdam aliquam maiores rerum voluptas iste numquam a aut harum aliquid ullam eum alias corporis sequi sapiente nulla. Dolor earum aut eius quaerat ex odio exercitationem commodi eum laboriosam accusamus esse consectetur reiciendis consequuntur inventore dolorem ut ducimus vitae quas adipisci, quibusdam pariatur deleniti velit veritatis beatae! Aspernatur, aperiam explicabo! Illo quo ut obcaecati voluptas explicabo non quaerat dolorum autem, atque rem quae facilis maxime mollitia, perspiciatis doloribus corrupti nesciunt sit quibusdam dolor, ullam nemo odio porro quis! Maxime, dolor laborum. Architecto saepe cumque sit earum doloremque maxime ducimus animi perferendis consectetur sapiente, ex ad eaque adipisci nihil quia voluptate delectus eius mollitia praesentium est velit quisquam repudiandae? Quos autem aut error, sunt ratione nihil! Accusantium corporis commodi quis hic. Voluptatum eaque molestiae modi quis, maiores odio soluta inventore fugit, animi vel dolorum. Praesentium impedit aliquid aperiam, enim odio itaque provident ipsam accusantium doloremque magni ut nihil quam minus a vero, nulla iusto suscipit labore. Dolor accusantium pariatur esse officia provident possimus natus fugiat corporis, quod saepe porro impedit nihil ea perferendis, et ullam sed, omnis voluptatem eligendi ipsum delectus consectetur repellendus. Architecto laudantium rem est fuga aut odit, eaque et at nam, a minima optio cum provident neque autem voluptatibus tenetur? Consequatur eius quam voluptatum provident magni maiores, nostrum facere porro nihil delectus eum tenetur error. Tenetur laudantium harum, sed suscipit, voluptatem nam veniam dolores culpa vero magni veritatis animi facilis hic a porro. Sint quisquam nam dolores quod optio repellat reprehenderit ipsum rem incidunt aut maiores beatae, expedita cumque veritatis! Repudiandae qui iste, debitis blanditiis enim dolores nobis autem.</p>
+        <a href="#" class="btn">Daha Fazla<i class='bx bx-right-arrow-alt'></i></a>
+
+    </div>
+ </section>
+ 
+ <!-- Customers Bölümü -->
+  <section class="customers" id="customers">
+    <h2>Müşterilerimiz Bizi Neden Seviyor?</h2>
+    <!--Customers Container-->
+    <div class="customers-container">
+        <!--Box 1-->
+        <div class="box">
+            <i class='bx bxs-quote-alt-left' ></i>
+            <div class="stars">
+                <i class='bx bxs-star' ></i>
+                <i class='bx bxs-star' ></i>
+                <i class='bx bxs-star' ></i>
+                <i class='bx bxs-star' ></i>
+                <i class='bx bxs-star-half' ></i>
+            </div>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias labore nam, molestiae aperiam doloribus exercitationem natus.</p>
+        <div class="review-profile">
+            <img src="img/c3.jpg" alt="">
+            <h3>ridvan sevindik</h3>
+        </div>   
+        </div>
+         <!--Box 2-->
+        <div class="box">
+            <i class='bx bxs-quote-alt-left' ></i>
+            <div class="stars">
+                <i class='bx bxs-star' ></i>
+                <i class='bx bxs-star' ></i>
+                <i class='bx bxs-star' ></i>
+                <i class='bx bxs-star' ></i>
+                <i class='bx bxs-star-half' ></i>
+            </div>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias labore nam, molestiae aperiam doloribus exercitationem natus.</p>
+        <div class="review-profile">
+            <img src="img/c2.jpg" alt="">
+            <h3>mehmet ali tığlı</h3>
+        </div>   
+        </div>
+         <!--Box 3-->
+        <div class="box">
+            <i class='bx bxs-quote-alt-left' ></i>
+            <div class="stars">
+                <i class='bx bxs-star' ></i>
+                <i class='bx bxs-star' ></i>
+                <i class='bx bxs-star' ></i>
+                <i class='bx bxs-star' ></i>
+                <i class='bx bxs-star' ></i>
+            </div>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias labore nam, molestiae aperiam doloribus exercitationem natus.</p>
+        <div class="review-profile">
+            <img src="img/c1.jpg" alt="">
+            <h3>demet sevindik</h3>
+        </div>   
+        </div>
+    </div>
+  </section>
+  <!-- Footer Bölümü -->
+   <section class="footer" id="footer">
+    <div class="footer-box">
+        <a href="#" class="logo"><i class='bx bxs-basket' ></i></box-icon>AYEMEK</a>
+        <p>Fatih Mahallesi Karadut Sk. <br> Sancaktepe/İSTANBUL</p>
+        <div class="social">
+            <a href="#"><i class='bx bxl-facebook'></i></a>
+            <a href="#"><i class='bx bxl-instagram'></i></a>
+            <a href="#"><i class='bx bxl-twitter'></i></a>
+            <a href="#"><i class='bx bxl-youtube'></i></a>
+        </div>
+    </div>
+    <div class="footer-box">
+        <h2>Kategoriler</h2>
+        <a href="#">Meyveler ve Sebzeler</a>
+        <a href="#">Günlük Ürünler</a>
+        <a href="#">Paket Yiyecekler</a>
+        <a href="#">İçecekler</a>
+    </div>
+    <div class="footer-box">
+        <h2>Linkler</h2>
+        <a href="#">Payment&Tax</a>
+        <a href="#">Kullanım Şartları</a>
+        <a href="#">My blog</a>
+        <a href="#">İade Politikası</a>
+    </div>
+    <div class="footer-box">
+        <h2>Haberler</h2>
+        <p>E posta ile %10  <br>İndirim Kazanın</p>
+        <form action="">
+            <i class='bx bxs-envelope' ></i>
+            <input type="email" name="" id="" placeholder="E-mail adresinizi giriniz">
+            <i class='bx bx-arrow-back bx-rotate-180' ></i>
+        </form>
+        
+    </div>
+   </section>
+
+
+
+<script src="production.js"></script>
+<script src="basket.js"></script>
+<script src="main.js"></script>
+
+</body>
+</html>

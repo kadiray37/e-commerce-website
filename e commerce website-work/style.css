@@ -1,0 +1,847 @@
+/* GOOGLE fonts */
+@import url("https://fonts.googleapis.com/css2?family=Lexend&family=Manrope:wght@200..800&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+* {
+  font-family: "Poppins", serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+  scroll-padding-top: 2rem;
+  scroll-behavior: smooth;
+}
+/* Some Variables */
+
+:root {
+  --green-color: #3cb815;
+  --ligyt-green-color: #c0eb7b;
+  --orange-color: #ff7e00;
+  --light-orange-color: #f75f1d;
+  --text-color: #1a2428;
+  --bg-color: #fff;
+}
+/* özelliştirilmiş scrollbar */
+::-webkit-scrollbar {
+  width: 0.5rem;
+  background: var(--ligyt-green-color);
+}
+::-webkit-scrollbar-thumb {
+  width: 0.5rem;
+  background: var(--green-color);
+  border-radius: 5rem;
+}
+
+img {
+  width: 100%;
+}
+body {
+  color: var(--text-color);
+}
+header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  right: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--bg-color);
+  box-shadow: 0px 8px 11px rgb(14 55 54 / 15%);
+  padding: 20px 100px;
+  transition: 0.5s;
+}
+section {
+  padding: 4.5rem 0 1.5rem;
+}
+/* --------------------------- HEADER KISIMI CSS KODLARI --------------------------- */
+.profile {
+  display: flex;
+  align-items: center;
+  column-gap: 0.5rem;
+  cursor: pointer;
+}
+.profile img {
+  width: 40px;
+  height: 40px;
+  object-fit: cover;
+  border-radius: 50%;
+  object-position: center;
+}
+.profile span {
+  font-size: 13px;
+  font-weight: 500;
+}
+.logo {
+  display: flex;
+  align-items: center;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--text-color);
+  column-gap: 0.5rem;
+}
+.logo .bx {
+  font-size: 24px;
+  color: var(--orange-color);
+}
+.navbar {
+  display: flex;
+  column-gap: 0.5rem;
+}
+.navbar a {
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--text-color);
+  padding: 0.5rem 1rem;
+}
+.navbar a:hover,
+.navbar .home.active {
+  background-color: var(--green-color);
+  border-radius: 5rem;
+  color: var(--bg-color);
+  transition: 0.5s;
+}
+#menu-icon {
+  font-size: 24px;
+  cursor: pointer;
+  z-index: 1001;
+  display: none;
+}
+.basket-area {
+  position: absolute;
+  right: 0px;
+  margin-top: 80px;
+}
+.basket-area h2 {
+  margin-top: 2rem;
+  align-items: center;
+  text-align: center;
+}
+.basket-area .basket-area-content.active {
+  width: 500px;
+  height: 93vh;
+  position: fixed;
+  right: 0px;
+  z-index: 999;
+  background-color: white;
+  border-radius: 10px;
+}
+.basket-area .basket-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  border: 1px solid #ccc;
+}
+.basket-area .basket-item-img {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+}
+.basket-area .basket-item-wrapper {
+  margin-top: 2rem;
+}
+.basket-area-content.diseble {
+  display: none;
+}
+.basket-item-total {
+  position: absolute;
+  bottom: 0.8rem;
+  width: 100%;
+  height: 80px;
+  text-align: center;
+  font-size: 18px;
+  background-color: var(--green-color);
+  color: var(--ligyt-green-color);
+}
+.basket-item-total-content {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.bx-trash{
+  font-size: 18px;
+  cursor: pointer;
+}
+/* --------------------------- SLİDER KISIMI CSS KODLARI --------------------------- */
+#sliderbtn {
+  position: absolute;
+  top: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 98%;
+  font-size: 36px;
+  margin: 0 20px;
+}
+.container {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: url(img/background.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+}
+.container img {
+  width: 400px;
+  position: absolute;
+  bottom: -200px;
+  right: 280px;
+}
+.home {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+.swiper-wrapper {
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  transition: 0.5s all ease-in;
+}
+
+.swiper-slide {
+  min-width: 100%;
+}
+
+.home-text {
+  padding: 0 150px;
+  position: absolute;
+  top: 300px;
+  left: 20%;
+  transform: translateX(-30%);
+}
+.home-text span {
+  font-weight: 400;
+  color: var(--green-color);
+  text-transform: uppercase;
+}
+.home-text h1 {
+  font-size: 2.4rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+}
+.btn {
+  padding: 0.6rem 1rem;
+  background: var(--green-color);
+  font-weight: 400;
+  border-radius: 5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  column-gap: 0.5rem;
+  max-width: 160px;
+}
+.btn .bx {
+  padding: 4px;
+  background: var(--bg-color);
+  color: var(--text-color);
+  border-radius: 1rem;
+  font-size: 20px;
+  margin: auto;
+}
+.btn:hover {
+  background: var(--light-orange-color);
+  transition: 0.2s ease;
+}
+.swiper-button-next {
+  background: url(img/right-arrow.png);
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  background-position: center;
+  margin-right: 20px;
+}
+.swiper-button-next::after {
+  display: none;
+}
+.swiper-button-prev {
+  background: url(img/left-arrow.png);
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  background-position: center;
+  margin-right: 20px;
+}
+.swiper-button-prev::after {
+  display: none;
+}
+.bx-basket{
+  font-size: 24px;
+  cursor: pointer;
+  border-radius: 50%;
+  padding: 4px;
+  
+}
+.bx-basket.active{
+  background-color: var(--light-orange-color);
+  
+}
+/* --------------------------- CATEGORİES KISIMI CSS KODLARI --------------------------- */
+.heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.heading h1 {
+  font-size: 1.6rem;
+  font-weight: 600;
+}
+.heading span {
+  color: var(--green-color);
+}
+.categories {
+  max-width: 1240px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.categories-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, auto));
+  gap: 1rem;
+  margin-top: 2rem;
+}
+.categories-container .box {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  border-radius: 0.5rem;
+  transition: 0.2s all linear;
+}
+.categories-container .box img {
+  width: 100%;
+  height: 100px;
+  object-fit: contain;
+  object-position: center;
+}
+.categories-container .box h2 {
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+.categories-container .box span {
+  font-size: 0.8rem;
+  font-weight: 400;
+  margin-bottom: 1rem;
+}
+.categories-container .box .bx {
+  padding: 10px;
+  background: var(--green-color);
+  color: var(--bg-color);
+  border-radius: 50%;
+  opacity: 0;
+  transition: 0.2s all linear;
+}
+.categories-container .box .bx:hover {
+  background: var(--light-orange-color);
+  transition: 0.2 all linear;
+}
+.categories-container .box:hover .bx {
+  opacity: 1;
+  transition: 0.2s all linear;
+}
+.box1 {
+  background: #fef4ea;
+}
+.box2 {
+  background: #e9f4e3;
+}
+.box3 {
+  background: #f2f4ea;
+}
+.box4 {
+  background: #eeeef9;
+}
+.box5 {
+  background: #f7f6d7;
+}
+
+/* --------------------------- PRODUCTS KISIMI CSS KODLARI --------------------------- */
+.dats {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+  margin-top: 1rem;
+}
+.dot {
+  width: 10px;
+  height: 10px;
+  background-color: #ccc;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+.dot.active {
+  background-color: var(--light-orange-color);
+}
+.products {
+  max-width: 1240px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.production-wrapper {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+.products-container {
+  display: flex;
+  min-width: 100%;
+  margin-top: 2rem;
+  gap: 6px;
+  transition: 0.5s all ease-in;
+  cursor: pointer;
+  z-index: 999;
+}
+
+#productbtn {
+  /* position: absolute;
+  top: 50%; */
+}
+#product-right {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 0px;
+  font-size: 36px;
+}
+#product-right:hover{
+  font-size: 72px;
+  transition: .1s all ease-in-out;
+}
+#product-left {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 0px;
+  font-size: 36px;
+}
+#product-left:hover{
+  font-size: 72px;
+  transition: .1s all ease-in-out;
+}
+#product-right.disabled,
+#product-left.disabled {
+  pointer-events: none;
+  opacity: 0.5;
+}
+
+#productbtn:hover {
+  font-size: 72px;
+}
+.products-container .box {
+  min-width: 409px;
+  padding: 20px;
+  /* box-shadow: 1px 2px 11px 4px rgb(14 55 54 / 15%); */
+  border: solid 2px var(--green-color);
+  border-radius: 0.5rem;
+  position: relative;
+}
+.products-container .box img {
+  width: 100%;
+  height: 200px;
+  object-fit: contain;
+  object-position: center;
+}
+.products-container .box span {
+  font-weight: 500;
+  font-size: 13px;
+}
+.products-container .box h2 {
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+.products-container .box .price {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-top: 0.5rem;
+  color: var(--light-orange-color);
+}
+.products-container .box .price span {
+  color: var(--text-color);
+}
+.products-container .box .bx-cart-alt {
+  position: absolute;
+  right: 5px;
+  bottom: 5px;
+  padding: 10px;
+  background: var(--green-color);
+  font-size: 20px;
+  border-radius: 0.5rem 0 0.5rem 0;
+}
+.products-container .box .bx-cart-alt:hover {
+  background: var(--orange-color);
+  transition: 0.2s all linear;
+}
+.products-container .box .bx-heart {
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  padding: 10px;
+  color: var(--orange-color);
+  font-size: 20px;
+}
+.products-container .box .discount {
+  position: absolute;
+  top: 1rem;
+  left: 0px;
+  background-color: var(--light-orange-color);
+  color: var(--bg-color);
+  padding: 4px 18px;
+  clip-path: polygon(
+    100% 0%,
+    75% 50%,
+    100% 100%,
+    0 100%,
+    0 46%,
+    0 0
+  ); /* css clip-path maker */
+}
+
+/* --------------------------- ABOUT KISIMI CSS KODLARI --------------------------- */
+.about {
+  max-width: 1240px;
+  margin-left: auto;
+  margin-right: auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(36rem, auto));
+  align-items: center;
+  gap: 1.5rem;
+}
+.about-text span {
+  font-weight: 600;
+  text-transform: uppercase;
+  color: var(--green-color);
+}
+
+.about-text p {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 4;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin: 0.5rem 0 1rem;
+}
+.customers {
+  max-width: 1240px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.customers h2 {
+  text-align: center;
+  font-size: 1.6rem;
+  font-weight: 600;
+}
+.customers-container {
+  margin-top: 3.5rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, auto));
+  gap: 1.5rem;
+}
+.customers-container .box {
+  padding: 20px;
+  box-shadow: 1px 2px 11px 4px rgb(14 15 54 / 15%);
+  border-radius: 0.5rem;
+  border-bottom: 7px solid var(--green-color);
+  transition: 0.2s linear all;
+}
+.customers-container .box:hover {
+  transform: translateY(10px);
+}
+.customers-container .box .bx {
+  font-size: 24px;
+  color: var(--green-color);
+}
+.customers-container .box .stars .bx {
+  font-size: 1rem;
+  color: var(--light-orange-color);
+}
+.customers-container .box p {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 1rem;
+}
+.review-profile {
+  display: flex;
+  align-items: center;
+  margin-top: 1rem;
+  column-gap: 0.5rem;
+}
+.review-profile img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center;
+}
+.review-profile h3 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+/* --------------------------- FOOTER KISIMI CSS KODLARI --------------------------- */
+.footer {
+  max-width: 1240px;
+  margin-left: auto;
+  margin-right: auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, auto));
+  gap: 1.5rem;
+  margin-top: 2rem;
+  background: #fef4ea;
+  border-radius: 0.5rem;
+  padding: 20px;
+}
+.footer-box {
+  display: flex;
+  flex-direction: column;
+}
+.footer-box p {
+  font-size: 1rem;
+  margin: 0.5rem 0 1rem;
+}
+.social {
+  display: flex;
+  align-items: center;
+  column-gap: 0.5rem;
+}
+.social .bx {
+  padding: 10px;
+  background: var(--bg-color);
+  color: var(--green-color);
+  border-radius: 5rem;
+  font-size: 20px;
+}
+.social .bx:hover {
+  background: var(--green-color);
+  color: var(--bg-color);
+  transition: 0.2s all linear;
+}
+.footer-box h2 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+.footer-box a {
+  color: #868a92;
+  margin-bottom: 1rem;
+}
+.footer-box a:hover {
+  color: var(--light-orange-color);
+}
+.footer-box form {
+  border-bottom: 1px solid var(--text-color);
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  column-gap: 0.5rem;
+}
+.footer-box form input {
+  background: transparent;
+  border: none;
+  outline: none;
+}
+.footer-box form .bx {
+  font-size: 20px;
+  color: var(--light-orange-color);
+  cursor: pointer;
+}
+.footer-box form .bxs-envelope {
+  color: var(--green-color);
+}
+
+/* --------------------------- MEDIA QUERIES KISIMI --------------------------- */
+@media (max-width: 1440px) {
+  .container img {
+    width: 370px;
+    right: 200px;
+  }
+}
+@media (max-width: 1260px) {
+  section {
+    padding: 4.5rem 135px 1.5rem;
+  }
+  .about img {
+    width: 45%;
+  }
+  .footer {
+    max-width: 1000px;
+  }
+}
+@media (max-width: 1080px) {
+  .products-container .box {
+    min-width: 338px;
+  }
+  .container img {
+    width: 300px;
+    right: 150px;
+    bottom: 10px;
+  }
+  .footer {
+    max-width: 800px;
+  }
+  header {
+    padding: 20px 50px;
+  }
+}
+
+@media (max-width: 940px) {
+  .products-container .box {
+    min-width: 300px;
+  }
+  .container img {
+    width: 280px;
+    right: 44px;
+    bottom: 60px;
+  }
+  .home-text h1 {
+    font-size: 1.6rem;
+  }
+  .home-text {
+    top: 200px;
+    left: 12%;
+  }
+  .navbar a {
+    padding: 0.5rem 0.5rem;
+  }
+  .footer {
+    max-width: 685px;
+  }
+}
+@media (max-width: 800px) {
+  .products-container .box {
+    min-width: 220px;
+  }
+  header {
+    padding: 10px 25px;
+  }
+  .navbar a {
+    font-size: 10px;
+  }
+  .footer {
+    max-width: 550px;
+  }
+  .about {
+    grid-template-columns: repeat(auto-fit, minmax(15rem, auto));
+  }
+  .about img {
+    width: 100%;
+  }
+}
+@media (max-width: 650px) {
+  .basket-area .basket-area-content.active{
+    width: 300px;
+  }
+  .basket-area{
+    margin-top: 60px;
+  }
+  .bx-basket{
+    font-size: 14px;
+  }
+  #menu-icon {
+    display: block;
+  }
+  .navbar {
+    position: absolute;
+    top: -888px;
+    left: 0px;
+    right: 0px;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--bg-color);
+    box-shadow: 4px 4px 0 4px rgb(14 55 54 / 15%);
+    transition: 0.2s all linear;
+    text-align: left;
+  }
+  .navbar a {
+    padding: 1rem;
+    margin: 1rem;
+    display: block;
+  }
+  .navbar a:hover,
+  .navbar .home-active {
+    border-radius: 0.5rem;
+    color: var(--bg-color);
+  }
+  .navbar.active {
+    top: 100%;
+  }
+  .footer {
+    max-width: 360px;
+  }
+  .home-text {
+    padding: 0px 30px;
+    top: 120px;
+    left: 42%;
+  }
+  .container img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -10%);
+  }
+  .heading h1 {
+    font-size: 16px;
+  }
+  section {
+    padding: 4.5rem 90px 1.5rem;
+  }
+}
+@media (max-width: 550px) {
+  .home-text {
+    display: flex;
+    flex-direction: column;
+    left: 50%;
+    transform: translate(-50%);
+    width: 100%;
+    text-align: center;
+    align-items: center;
+  }
+  .btn {
+    padding: 0.2rem 0.6rem;
+    background: var(--green-color);
+    font-weight: 400;
+    border-radius: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 100px;
+    font-size: 12px;
+    text-align: center;
+    column-gap: 8px;
+  }
+  .btn .bx {
+    padding: 2px;
+    background: var(--bg-color);
+    color: var(--text-color);
+    border-radius: 1rem;
+    font-size: 8px;
+    margin: auto;
+  }
+
+  .customers-container {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  section {
+    padding: 4.5rem 25px 1.5rem;
+  }
+}
+@media (max-width: 475px) {
+  .products-container .box {
+    min-width: 260px;
+  }
+  .home-text {
+    width: 350px;
+  }
+}
